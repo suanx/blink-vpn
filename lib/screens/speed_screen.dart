@@ -6,7 +6,7 @@ class SpeedScreen extends StatefulWidget {
   const SpeedScreen({super.key, required this.service});
 
   @override
-  _SpeedScreenState createState() => _SpeedScreenState();
+  State<SpeedScreen> createState() => _SpeedScreenState();
 }
 
 class _SpeedScreenState extends State<SpeedScreen> {
