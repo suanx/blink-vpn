@@ -13,6 +13,7 @@ class BlinkApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Blink VPN',
+      debugShowCheckedModeBanner: false,
       theme: AppTheme.light,
       // 只用浅色主题：不跟随系统深色模式，顶栏和页面颜色统一为白色
       darkTheme: AppTheme.light,
