@@ -14,7 +14,9 @@ class BlinkApp extends StatelessWidget {
     return MaterialApp(
       title: 'Blink VPN',
       theme: AppTheme.light,
-      darkTheme: AppTheme.dark,
+      // 只用浅色主题：不跟随系统深色模式，顶栏和页面颜色统一为白色
+      darkTheme: AppTheme.light,
+      themeMode: ThemeMode.light,
       home: const BlinkHome(),
     );
   }
@@ -56,9 +58,9 @@ class _BlinkHomeState extends State<BlinkHome> {
         currentIndex: index,
         onTap: (v) => setState(() => index = v),
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.public), label: 'Nodes'),
-          BottomNavigationBarItem(icon: Icon(Icons.speed), label: 'Speed'),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: '首页'),
+          BottomNavigationBarItem(icon: Icon(Icons.public), label: '节点'),
+          BottomNavigationBarItem(icon: Icon(Icons.speed), label: '测速'),
         ],
       ),
     );

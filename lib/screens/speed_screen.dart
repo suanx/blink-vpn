@@ -28,7 +28,7 @@ class _SpeedScreenState extends State<SpeedScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Speed Test')),
+      appBar: AppBar(title: const Text('测速'), centerTitle: true),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -42,18 +42,18 @@ class _SpeedScreenState extends State<SpeedScreen> {
               )
             else if (result != null)
               const Text(
-                'Test failed, try again',
+                '测速失败，请重试',
                 style: TextStyle(fontSize: 13),
               )
             else
               const Text(
-                'Tap Start to test your speed',
+                '点击开始，测试你的速度',
                 style: TextStyle(fontSize: 13),
               ),
             const SizedBox(height: 24),
             ElevatedButton(
               onPressed: testing ? null : runTest,
-              child: const Text('Start Test'),
+              child: const Text('开始测速'),
             ),
           ],
         ),

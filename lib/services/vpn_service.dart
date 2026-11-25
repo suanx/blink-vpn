@@ -10,10 +10,10 @@ class VpnService extends ChangeNotifier {
   double lastSpeedMbps = 0;
 
   final List<Node> nodes = const [
-    Node(id: 'hk', name: 'Hong Kong', country: 'Hong Kong', city: 'Hong Kong', flag: '🇭🇰', pingMs: 32, speedMbps: 120, protocol: 'VLESS'),
-    Node(id: 'jp', name: 'Japan', country: 'Japan', city: 'Tokyo', flag: '🇯🇵', pingMs: 78, speedMbps: 85, protocol: 'VLESS'),
-    Node(id: 'sg', name: 'Singapore', country: 'Singapore', city: 'Singapore', flag: '🇸🇬', pingMs: 55, speedMbps: 98, protocol: 'VLESS'),
-    Node(id: 'us', name: 'United States', country: 'United States', city: 'Los Angeles', flag: '🇺🇸', pingMs: 180, speedMbps: 45, protocol: 'VLESS'),
+    Node(id: 'hk', name: '香港', country: '香港', city: '香港', flag: '🇭🇰', pingMs: 32, speedMbps: 120, protocol: 'VLESS'),
+    Node(id: 'jp', name: '日本', country: '日本', city: '东京', flag: '🇯🇵', pingMs: 78, speedMbps: 85, protocol: 'VLESS'),
+    Node(id: 'sg', name: '新加坡', country: '新加坡', city: '新加坡', flag: '🇸🇬', pingMs: 55, speedMbps: 98, protocol: 'VLESS'),
+    Node(id: 'us', name: '美国', country: '美国', city: '洛杉矶', flag: '🇺🇸', pingMs: 180, speedMbps: 45, protocol: 'VLESS'),
   ];
 
   void selectNode(Node node) {

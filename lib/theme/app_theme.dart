@@ -14,6 +14,9 @@ class AppTheme {
     scaffoldBackgroundColor: Colors.white,
     appBarTheme: AppBarTheme(
       backgroundColor: Colors.white,
+      foregroundColor: _blue,
+      elevation: 0,
+      centerTitle: true,
       titleTextStyle: TextStyle(color: _blue, fontSize: 15, fontWeight: FontWeight.w600),
     ),
     textTheme: const TextTheme(

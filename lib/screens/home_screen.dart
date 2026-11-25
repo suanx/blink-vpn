@@ -8,15 +8,18 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Blink VPN')),
+      appBar: AppBar(
+        title: const Text('Blink VPN'),
+        centerTitle: true,
+      ),
       body: AnimatedBuilder(
         animation: service,
         builder: (context, _) => Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(service.currentNode?.name ?? 'No node selected', style: TextStyle(fontSize: 13)),
-              SizedBox(height: 24),
+              Text(service.currentNode?.name ?? '未选择节点', style: const TextStyle(fontSize: 13)),
+              const SizedBox(height: 24),
               GestureDetector(
                 onTap: () {
                   if (service.isConnected) {
@@ -28,20 +31,20 @@ class HomeScreen extends StatelessWidget {
                 child: Container(
                   width: 160,
                   height: 160,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     shape: BoxShape.circle,
-                    gradient: const LinearGradient(colors: [Colors.blue, Colors.cyan]),
+                    gradient: LinearGradient(colors: [Colors.blue, Colors.cyan]),
                   ),
                   child: Center(
                     child: Text(
-                      service.isConnecting ? 'Connecting...' : service.isConnected ? 'Connected' : 'Tap to Connect',
+                      service.isConnecting ? '连接中...' : service.isConnected ? '已连接' : '点击连接',
                       style: const TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold),
                     ),
                   ),
                 ),
               ),
-              SizedBox(height: 24),
-              Text('Speed: ${service.lastSpeedMbps.toStringAsFixed(1)} Mbps', style: TextStyle(fontSize: 12)),
+              const SizedBox(height: 24),
+              Text('速度：${service.lastSpeedMbps.toStringAsFixed(1)} Mbps', style: const TextStyle(fontSize: 12)),
             ],
           ),
         ),
