@@ -1,0 +1,10 @@
+name = "blink-vpn-backend"
+main = "src/index.ts"
+compatibility_date = "2026-11-25"
+workers_dev = true
+account_id = "c07323a615cdcd49d596ef980ea7ac4d"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "blink-vpn-db"
+database_id = "62146a32-4cb8-4882-84c6-de827704894d"

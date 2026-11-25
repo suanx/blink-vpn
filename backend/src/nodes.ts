@@ -1,0 +1,58 @@
+export const NODES = [
+  {
+    id: 'hk',
+    name: '香港',
+    city: '香港',
+    country: '香港',
+    flag: '🇭🇰',
+    protocol: 'VLESS',
+    protocols: ['vless', 'trojan', 'shadowsocks'],
+    port: 443,
+    tls: true,
+    wsPath: '/vless',
+    address: 'blink-vpn-backend.suanxz.workers.dev',
+  },
+  {
+    id: 'jp',
+    name: '日本',
+    city: '东京',
+    country: '日本',
+    flag: '🇯🇵',
+    protocol: 'VLESS',
+    protocols: ['vless', 'trojan', 'shadowsocks'],
+    port: 443,
+    tls: true,
+    wsPath: '/vless',
+    address: 'blink-vpn-backend.suanxz.workers.dev',
+  },
+  {
+    id: 'sg',
+    name: '新加坡',
+    city: '新加坡',
+    country: '新加坡',
+    flag: '🇸🇬',
+    protocol: 'VLESS',
+    protocols: ['vless', 'trojan', 'shadowsocks'],
+    port: 443,
+    tls: true,
+    wsPath: '/vless',
+    address: 'blink-vpn-backend.suanxz.workers.dev',
+  },
+  {
+    id: 'us',
+    name: '美国',
+    city: '洛杉矶',
+    country: '美国',
+    flag: '🇺🇸',
+    protocol: 'VLESS',
+    protocols: ['vless', 'trojan', 'shadowsocks'],
+    port: 443,
+    tls: true,
+    wsPath: '/vless',
+    address: 'blink-vpn-backend.suanxz.workers.dev',
+  },
+];
+
+export function findNode(id: string) {
+  return NODES.find((node) => node.id === id);
+}
