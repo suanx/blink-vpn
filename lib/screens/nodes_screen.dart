@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../models/node.dart';
 import '../services/vpn_service.dart';
 
 class NodesScreen extends StatelessWidget {
