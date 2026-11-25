@@ -55,10 +55,10 @@ class _BlinkHomeState extends State<BlinkHome> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: index,
         onTap: (v) => setState(() => index = v),
-        items: [
-          BottomNavigationBarItem(icon: const Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: const Icon(Icons.public), label: 'Nodes'),
-          BottomNavigationBarItem(icon: const Icon(Icons.speed), label: 'Speed'),
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.public), label: 'Nodes'),
+          BottomNavigationBarItem(icon: Icon(Icons.speed), label: 'Speed'),
         ],
       ),
     );
