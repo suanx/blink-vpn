@@ -35,7 +35,7 @@ class HomeScreen extends StatelessWidget {
                   child: Center(
                     child: Text(
                       service.isConnecting ? 'Connecting...' : service.isConnected ? 'Connected' : 'Tap to Connect',
-                      style: TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold),
+                      style: const TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold),
                     ),
                   ),
                 ),
