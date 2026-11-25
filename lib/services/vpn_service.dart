@@ -2,12 +2,49 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import '../models/node.dart';
+import 'psiphon_service.dart';
 
 class VpnService extends ChangeNotifier {
   bool isConnected = false;
   bool isConnecting = false;
   Node? currentNode;
   double lastSpeedMbps = 0;
+
+  // Psiphon 应急模式（代理模式，第 1 阶段）：本机 SOCKS5/HTTP 代理，不是全设备 VPN。
+  final PsiphonService psiphon = PsiphonService();
+  bool emergencyMode = false;
+
+  VpnService() {
+    psiphon.addListener(notifyListeners);
+  }
+
+  @override
+  void dispose() {
+    psiphon.removeListener(notifyListeners);
+    super.dispose();
+  }
+
+  void setEmergencyMode(bool value) {
+    emergencyMode = value;
+    notifyListeners();
+  }
+
+  Future<void> connectEmergency() async {
+    await psiphon.startPsiphon();
+    notifyListeners();
+  }
+
+  Future<void> disconnectEmergency() async {
+    await psiphon.stopPsiphon();
+    notifyListeners();
+  }
+
+  /// 经 Psiphon 代理查询出口 IP，验证流量确实走了隧道。失败返回 ''。
+  Future<String> checkPsiphonExitIp() async {
+    final ip = await psiphon.checkExitIp();
+    notifyListeners();
+    return ip;
+  }
 
   final List<Node> nodes = const [
     Node(id: 'hk', name: '香港', country: '香港', city: '香港', flag: '🇭🇰', pingMs: 32, speedMbps: 120, protocol: 'VLESS'),

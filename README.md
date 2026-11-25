@@ -2,11 +2,14 @@
 
 Blink VPN — fast, free VPN client. Flutter app, Android first, Windows next.
 
-> **Status: scaffold only (v0.1.0).** The UI, navigation, node list and speed
-> test work, but `VpnService.connect()` is a **simulated placeholder** — it
-> does NOT create a real VPN tunnel yet. Real traffic routing needs the
-> sing-box / VLESS core integration (see "Next steps" below). Do not present
-> this build as a working VPN.
+> **Status: scaffold + Psiphon emergency mode (Phase 1, proxy mode only).**
+> The UI, navigation, node list and speed test work, but `VpnService.connect()`
+> is a **simulated placeholder** — it does NOT create a real VPN tunnel yet.
+> Psiphon emergency mode (2026-11-25) is proxy mode only: a local SOCKS5/HTTP
+> proxy on the phone, in-app use only, NOT device-wide VPN. It also needs
+> Blink's own SponsorId / PropagationChannelId from Psiphon Inc. — the
+> config currently holds placeholders and the tunnel will fail to start
+> until those are filled in. Do not present this build as a working VPN.
 
 ## What is in this repo
 

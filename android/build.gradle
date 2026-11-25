@@ -2,6 +2,10 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        // Psiphon MobileLibrary 官方 AAR（2.0.43，2026-11-17 发布）。
+        maven {
+            url "https://raw.github.com/Psiphon-Labs/psiphon-tunnel-core-Android-library/master"
+        }
     }
 }
 

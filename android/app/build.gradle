@@ -49,6 +49,11 @@ android {
     }
 }
 
+dependencies {
+    // Psiphon MobileLibrary 官方 AAR，GPL-3.0。只用于应急模式（代理模式）。
+    implementation 'ca.psiphon:psiphontunnel:2.0.43'
+}
+
 flutter {
     source = "../.."
 }
