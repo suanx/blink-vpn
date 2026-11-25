@@ -30,7 +30,7 @@ class HomeScreen extends StatelessWidget {
                   height: 160,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    gradient: LinearGradient(colors: [Colors.blue, Colors.cyan]),
+                    gradient: const LinearGradient(colors: [Colors.blue, Colors.cyan]),
                   ),
                   child: Center(
                     child: Text(
