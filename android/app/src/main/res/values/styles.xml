@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme used for the launch (splash) screen: white background, no title bar / action bar. -->
+    <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+    <!-- Theme used once Flutter is running: white background, no native ActionBar.
+         Without this, Android falls back to a default theme that draws a dark
+         native ActionBar with the app label above the Flutter AppBar. -->
+    <style name="NormalTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+</resources>
